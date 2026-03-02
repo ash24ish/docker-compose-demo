@@ -28,7 +28,7 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=root
       - ME_CONFIG_MONGODB_SERVER=mongodb # write mongodb servicename here 
 volumes:
-  mongo-data:
+  mongo-data: # this is volumn name can be anything, change it at line 21 also
     # name: my-custome-mongo-volume-name # optional by default name will be -> <project>_<volume-name>
   uploads-data:
     # this volume stores the images and videos of uploads folder 
