@@ -26,7 +26,9 @@ app.use("/uploads", express.static("uploads"));
 // const MONGO_URI = process.env.MONGO_URI;
 let databaseName = "my-app-db"
 const mongoUrlLocal = `mongodb://root:root@localhost:27017/${databaseName}?authSource=admin` // to run on local machine
-const MONGO_URI = `mongodb://root:root@mongodb:27017/${databaseName}?authSource=admin` // to run in container
+// to run inside container we replace 'localhost' to mongodb because 'localhost' doesn't work between containers as 'localhost' inside container refers to itself.
+const MONGO_URI = `mongodb://root:root@mongodb:27017/${databaseName}?authSource=admin` 
+
 // MongoDB Connection
 mongoose.connect(MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
