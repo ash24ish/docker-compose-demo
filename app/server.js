@@ -21,7 +21,7 @@ app.use(express.static(__dirname));
 app.use("/uploads", express.static("uploads"));
 // app.use(express.static("app"));
 
-
+// test comment added
 // Use native Node.js env variables
 // const MONGO_URI = process.env.MONGO_URI;
 let databaseName = "my-app-db"
